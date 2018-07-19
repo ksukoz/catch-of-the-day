@@ -1,0 +1,30 @@
+.storePicker {
+  background-color: #fff;
+  width: max-content;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  border: 2px solid #000;
+}
+.storePicker h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.storePicker input {
+  width: 100%;
+  padding: 1rem;
+}
+.storePicker input::placeholder {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.storePicker button {
+  width: 100%;
+  background-color: transparent;
+  padding: 0 1rem;
+  cursor: pointer;
+  border: 2px solid #000;
+  
+  text-transform: uppercase;
+}
