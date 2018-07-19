@@ -13,10 +13,7 @@
 .storePicker input {
   width: 100%;
   padding: 1rem;
-}
-.storePicker input::placeholder {
   text-align: center;
-  text-transform: uppercase;
 }
 
 .storePicker button {
