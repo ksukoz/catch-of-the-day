@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Order extends Component {
   render() {
     return (
-      <div className="order">text</div>
+      <div className="order-enter">text</div>
     )
   }
 } 
