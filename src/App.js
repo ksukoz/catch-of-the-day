@@ -39,8 +39,15 @@ class App extends Component {
     fishes[`fish${Date.now()}`] = fish;
     this.setState({
       fishes
-    })
-    console.log(this.state)
+    });
+  };
+
+  updatedFish = (key, updatedFish) => {
+    const fishes = {...this.state.fishes};
+    fishes[key] = updatedFish;
+    this.setState({
+      fishes
+    });
   };
 
   loadSampleFishes = () => {
@@ -71,7 +78,7 @@ class App extends Component {
           </ul>
         </div>
         <Order {...this.state} />
-        <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
+        <Inventory addFish={this.addFish} updatedFish={this.updatedFish} loadSampleFishes={this.loadSampleFishes} fish={this.state.fishes} />
       </div>
     );
   }
