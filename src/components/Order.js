@@ -40,11 +40,11 @@ class Order extends Component {
     return (
       <div className="order-wrap">
         <h2>Order</h2>
-        <ul>
+        <ul className="order">
           {orderIds.map(this.renderOrder)}
         </ul>
         <div className="total">
-          <strong>{formatPrice(total)}</strong>
+          <strong>Total {formatPrice(total)}</strong>
         </div>
       </div>
     )
