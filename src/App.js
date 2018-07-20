@@ -49,7 +49,7 @@ class App extends Component {
             {/* <Fish /> */}
           </ul>
         </div>
-        <Order />
+        <Order {...this.state} />
         <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
