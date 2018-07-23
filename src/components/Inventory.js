@@ -11,6 +11,7 @@ class Inventory extends Component {
         {Object.keys(this.props.fish).map(key => <EditFishForm 
           fish={this.props.fish[key]} 
           updatedFish={this.props.updatedFish} 
+          deleteFish={this.props.deleteFish}
           key={key} 
           index={key} 
         />)}

@@ -50,6 +50,14 @@ class App extends Component {
     });
   };
 
+  deleteFish = key => {
+    const fishes = {...this.state.fishes};
+
+    fishes[key] = null;
+
+    this.setState({ fishes });
+  };
+
   loadSampleFishes = () => {
     this.setState({fishes: sampleFishes})
   };
@@ -58,6 +66,14 @@ class App extends Component {
     const order = {...this.state.order};
 
     order[key] = order[key] + 1 || 1;
+
+    this.setState({ order });
+  };
+
+  removeFromOrder = key => {
+    const order = {...this.state.order};
+
+    delete order[key];
 
     this.setState({ order });
   };
@@ -77,8 +93,14 @@ class App extends Component {
             {/* <Fish /> */}
           </ul>
         </div>
-        <Order {...this.state} />
-        <Inventory addFish={this.addFish} updatedFish={this.updatedFish} loadSampleFishes={this.loadSampleFishes} fish={this.state.fishes} />
+        <Order {...this.state} removeFromOrder={this.removeFromOrder} />
+        <Inventory 
+          addFish={this.addFish} 
+          updatedFish={this.updatedFish} 
+          deleteFish={this.deleteFish}
+          loadSampleFishes={this.loadSampleFishes} 
+          fish={this.state.fishes}        
+        />
       </div>
     );
   }
