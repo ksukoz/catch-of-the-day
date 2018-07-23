@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import AddFishForm from './AddFishForm';
-import fishes from '../sample-fishes';
+import PropTypes from 'prop-types';
 import EditFishForm from './EditFishForm';
 
 class Inventory extends Component {
+  static propTypes = {
+    fish: PropTypes.object,
+    updatedFish: PropTypes.func,
+    deleteFish: PropTypes.func,
+    loadSampleFishes: PropTypes.func
+  };
+
   render() {
     return (
       <div className="inventory">
